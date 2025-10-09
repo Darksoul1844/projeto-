@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniMercado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>MiniMercado</h1>
+    <input type="text" id="search" placeholder="Buscar produtos..." />
+    <button id="openForm">Criar anúncio</button>
+  </header>
+
+  <main>
+    <section id="productList"></section>
+  </main>
+
+  <!-- Formulário de criação -->
+  <div id="formModal" class="modal hidden">
+    <form id="productForm">
+      <h2>Novo Anúncio</h2>
+      <label>Título: <input type="text" id="title" required /></label>
+      <label>Preço: <input type="number" id="price" required /></label>
+      <label>Categoria: <input type="text" id="category" required /></label>
+      <label>Descrição: <textarea id="description"></textarea></label>
+      <label>Imagem: <input type="file" id="image" accept="image/*" /></label>
+      <button type="submit">Publicar</button>
+      <button type="button" id="closeForm">Cancelar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
